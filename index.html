@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html amp >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="assets/images/favico.png" type="image/x-icon">
+    <meta name="description"
+        content="A closer look into indicators of national development for the undergraduate course Digital Humanities 101 at UCLA. Made by Raphael Gatchalian, Tracy Vu, Julianne Dinsay, Raylene Factora, Ashley Ong, and Vivian Zhang.">
+    <meta name="amp-script-src" content="">
+    <meta name="robots" content= "index, follow">
+    
+    <meta name="og:title" content="World Happiness: A Closer Look">
+    <meta name="og:description" content="A closer look into indicators of national development for the course Digital Humanities 101 at UCLA. Made by research team Cloud 6.">
+    <meta name="og:image" content="https://happiness.humspace.ucla.edu/assets/images/meta-preview.jpg">
+    <meta name="og:url" content="https://happiness.humspace.ucla.edu">
+    <meta name="twitter:title" content="World Happiness: A Closer Look">
+    <meta name="twitter:description" content="A closer look into indicators of national development for the course Digital Humanities 101 at UCLA. Made by research team Cloud 6.">
+    <meta name="twitter:image" content="https://happiness.humspace.ucla.edu/assets/images/meta-preview.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <title>World Happiness: A Closer Look</title>
+    
+    <link rel="canonical" href="./">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+    <link href="https://fonts.googleapis.com/css?family=Karla:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style amp-custom> 
+        @import "css/styles.css";
+    </style>
+    <link rel="stylesheet" href="css/custom.css"> 
+    
+    <!-- <script async src="gradient.js"></script> -->
+    <script async src="js/scroll.js"></script>
+    <script async src="js/indexscroll.js"></script>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  
+</head>
+<body>
+    <div id="noiseoverlay"></div>
+    <div id="gradient"></div>
+    <a id="backtotopbutton"></a>
+
+    <!--mobile sidebar-->
+    <amp-sidebar id="sidebar" class="navigationbar" layout="nodisplay" side="right">
+        <div class="builder-sidebar" id="builder-sidebar">
+            <button on="tap:sidebar.close" class="close-sidebar">
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+                <li class="nav-item">
+                    <a class="nav-link link text-primary display-7" href="/analysis.html">
+                        <p><sub>01.</sub>&nbsp;ANALYSIS</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link text-primary display-7" href="/discussion.html">
+                        <p><sub>02.</sub>&nbsp;DISCUSSION</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link text-primary display-7" href="/data.html">
+                        <p><sub>03.</sub>&nbsp;DATA</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link text-primary display-7" href="/resources.html">
+                        <p><sub>04.</sub>&nbsp;RESOURCES</p>
+                    </a>
+                </li>
+            </ul>
+      </div>
+    </amp-sidebar>
+    <!--mobile sidebar-->
+
+    <section class="menu horizontal-menu navigationbar clearbg" id="menu2-0">
+        <nav class="navbar navbar-dropdown navbar-expand-lg navbar-fixed-top">
+            <div class="menu-container container-fluid"> 
+                <div class="navbar-brand">
+                    <a href="index.html">           
+                    <p class="whr whr-fonts-style whr-bold display-1 iconfont">
+                        wh.
+                    </p>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+                        <li class="nav-item">
+                            <a class="nav-link link text-primary display-7" href="/analysis.html">
+                                <sub>01.</sub>&nbsp;ANALYSIS
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link text-primary display-7" href="/discussion.html">
+                                <sub>02.</sub>&nbsp;DISCUSSION
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link text-primary display-7" href="/data.html">
+                                <sub>03.</sub>&nbsp;DATA
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link text-primary display-7" href="/resources.html">
+                                <sub>04.</sub>&nbsp;RESOURCES
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <button on="tap:sidebar.toggle" class="ampstart-btn hamburger sticky-but">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </section>
+
+    <section class="header2 homesection clearbg" id="header2-1">
+        <div class="container">
+            <div class="whr-row whr-jc-c">
+                <div class="whr-col-lg-8 whr-col-sm-12 whr-col-md-12 whr-flex whr-column">
+                    <h1 class="whr-fonts-style align-left whr-bold whr-pt-1 whr-pb-3 display-1 animate__animated animate__fadeInDown">
+                        world happiness: a closer look.
+                    </h1>
+                    <h3 class="whr-fonts-style align-left whr-pt-1 whr-pb-3 display-5">
+                        a comparative examination of indicators of national development for the undergraduate course
+                        <a href = "http://dh101.humanities.ucla.edu/">digital humanities 101</a>
+                        at UCLA.
+                    </h3>
+                    <div class="whr-section-btn align-left">
+                        <a class="btn btn-md btn-primary-outline display-4 scroll-to-abouttheproject">ABOUT THE PROJECT</a>
+                        <a class="btn btn-md btn-primary-outline display-4" href="/analysis.html#introduction">INTRODUCTION</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    <section class="content2 whr-section article cid-s9euAOC120" id="abouttheproject">
+        <div class="container">
+            <div class="whr-row whr-jc-c">
+                <div class="whr-col-sm-12 whr-col-md-10 whr-col-lg-8">
+                    <h3 class="whr-fonts-style whr-section-title whr-light whr-py-1 display-2">
+                        about the project</h3>
+                    <p class="whr-text whr-fonts-style whr-py-1 display-7">
+                        <strong>“World Happiness: A Closer Look”</strong> was created in the 2020 Summer Session course, <strong>Digital Humanities 101</strong>, an introductory digital humanities class taught under the supervision of Dr. Ashley Sanders Garcia and TA Madison Faulis at the University of California, Los Angeles.
+                    </p>
+                    <p class="whr-text whr-fonts-style whr-py-1 display-7">
+                        Students of the course were assigned a final project where they were tasked to choose a public dataset to analyze and conduct research based on an argument they formulated. With this research, students were also expected to create a website to portray their findings. The final project itself tests students to present their research in a narrative form, including visualizations created through the various tools that were taught throughout the course.
+                    </p>
+                    <p class="whr-text whr-fonts-style whr-py-1 display-7">
+                        Our team Cloud 6 chose to analyze the <strong>World Happiness Report 2020</strong> dataset which focused on collecting the happiness scores of countries and regions, as well as the factors that made up this score. To do this, we undertook the 3 levels of digital humanities: 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="content15 whr-section cid-s9euGYtpR7 clearbg" id="content15-6">
+        <div class="container whr-px-5">
+            <div class="whr-row whr-jc-c">
+                <div class="card whr-col-sm-12 whr-col-md-6 whr-col-lg-4 md-pb">
+                    <h3 class="whr-section-title whr-fonts-style align-center whr-pt-1 whr-pb-2 display-2" id="white">
+                        sources</h3>
+                                 
+                </div>
+                
+                <div class="card whr-col-sm-12 whr-col-md-6 whr-col-lg-4 md-pb">
+                    <h3 class="whr-section-title whr-fonts-style align-center whr-pt-1 whr-pb-2 display-2" id="white">
+                        processing</h3>
+                     
+                </div>
+            
+                <div class="card whr-col-sm-12 whr-col-md-6 whr-col-lg-4 last-child">
+                    <h3 class="whr-section-title whr-fonts-style align-center whr-pt-1 whr-pb-2 display-2" id="white">
+                        presentation</h3>
+                    
+                </div>
+            
+                
+            </div>
+        </div>
+    </section>
+    
+    <section class="content7 whr-section cid-s9euCgh9p5" id="content7-5">
+         
+    
+        <div class="container">
+            <div class="whr-row whr-jc-c">
+                <div class="whr-text counter-container whr-fonts-style whr-col-lg-8 whr-col-md-12 whr-col-sm-12 display-7">
+                    <ul>
+                        <li class="whr-pb-2"><strong>SOURCES</strong>&nbsp;- To answer our research questions comparing happiness in the Nordic and Asian Tiger Economy countries and determining if happiness is an individual or national matter, we used the <strong>World Happiness Report datasets from the years 2011-2019</strong> that was collected by the <strong>Gallup World Poll</strong>. The dataset includes a sample size of 2,000-3,000 people from each country that they survey. The amount of countries that are included in the World Happiness report fluctuate each year, but this past report included 154 countries. The dataset for the World Happiness Report broke down the happiness scores of each country by individual factor as well as the upper whisker and lower whisker, which are the variance of the reported scores by individuals in the prospective country. To learn more about our data sources, visit the <a href="/data.html" target="_blank">Data page</a>.&nbsp;</li>
+                        <li class="whr-pb-2"><strong>PROCESSING&nbsp;</strong>- The dataset provided by the World Happiness Report is comprehensible and clean. There were no erroneous entries, which made it easy to read and understand the data. We used <strong>Open Refine</strong> and <strong>Google Sheets</strong> to do minimal cleaning on the data, as well as <strong>Tableau</strong> and <strong>Plotly</strong> to make our data visualizations. We limited our data to just the Nordic and Asian Tiger Economies and to the years of 2011 to 2019, though the original dataset included data for some countries beginning in the year 2006 but the first World Happiness Report was released in 2012 using data collected in 2011. To process the data, we condensed the dataset to the years and countries that our project focused on, specifically the Nordic region as well as the Tiger Economy countries. &nbsp;</li>
+                        <li class="whr-pb-2"><strong>PRESENTATION</strong> - Our goal with our project was to find out further reasoning for the ranking of countries made by the World Happiness Report. Happiness seems hard to define by itself, and determining a whole country’s happiness seems a little arbitrary because of the difficulty of recording the happiness of a whole country based on individual surveys and outside knowledge like GDP and healthy life expectancy. We wanted to further explore the idea explained in <i>Silencing the Past</i> that declared that “Human beings participare in history both as actors and narrators” (Trouillot 2). The World Happiness Report seems to exemplify what it means to be both part of those written about and of those who wrote it, and we made sure to emphasize this in our methods of presentation. For our presentation, <strong>Mobirise</strong>, a web design application, was used for the initial structure of the website, and other tools and frameworks like <strong>Bootstrap</strong>, <strong>Visual Studio Code</strong>, and <strong>Adobe Photoshop</strong> were employed during the development of the website.&nbsp;</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="whr-section content1 cid-sa3uuRVnwv clearbg" id="content1-c">
+    
+        
+    
+         <div class="container">
+            <div class="whr-row whr-jc-c">
+                <div class="whr-col-sm-12 whr-col-md-8">
+                    <h2 class="whr-title align-center whr-fonts-style whr-bold display-2">
+                        <span style="font-weight: normal; font-size: 3rem; color: #ffffff">
+                            the team - cloud 6
+                        </span>
+                    </h2>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="team1 whr-section cid-sa3qfjmFSO clearbg" id="team1-a">
+    
+        
+        
+        <div class="container">
+            <div class="whr-row whr-jc-c">
+                <div class="card whr-col-sm-12 whr-col-md-6 whr-px-3 whr-col-lg-4 md-pb">
+                    <div class="card-wrapper">
+                        <div class="card-img" id="vu">
+                            <amp-img src="assets/images/vu.jpg" layout="responsive" width="159" height="159" alt="Tracy Vu" class="whr-m-auto">
+                            </amp-img>
+                        </div>
+                        <div class="card-box whr-pt-4 whr-px-4 whr-pb-5">
+                            <h4 class="whr-fonts-style card-subtitle align-center whr-semibold display-4">PROJECT MANAGER /<br>CO-EDITOR</h4>
+                            <h3 class="card-title whr-fonts-style align-center whr-pt-1 display-2 whr-pb-1" id="bluegradient">tracy vu</h3>
+                            <p class="whr-text whr-fonts-style align-center whr-pt-1 display-4">
+                                Tracy is a second year Mechanical Engineering major with a planned Entrepreneurship minor. As the Project Manager, she was in charge of ensuring that all parts of the project were being worked on as well as done in a timely manner. She made sure that everything needed was done correctly and helped keep the team on track. Tracy also worked as Co-Editor where she played a role in doing research to find scholarly articles to support the data analysis and helped with annotating the bibliography. She aided the content developers with the revision of the final drafts of the content for the project. Overall, she ensured that all elements of the project were there as needed. Aside from her primary role, she helped with the draft of the data critique, assisted in finding images that would be used throughout the project, and created a visual through Plotly.
+                            </p>
+                            <div class="icons-list social align-center whr-pt-3">
+                                
+                                
+                                
+                            <a href="mailto:tracyxvu@ucla.edu" target="_blank">
+                                    <span class="iconfont-wrapper">
+                                        <span class="amp-iconfont fa-envelope fa"><svg width="24" height="24" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" fill="#3f5efb"><path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"></path></svg></span>
+                                    </span>
+                                </a><a href="https://www.linkedin.com/in/tracy-vu-39914a1a2" target="_blank">
+                                    <span class="iconfont-wrapper">
+                                        <span class="amp-iconfont fa-linkedin-square fa"><svg width="24" height="24" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" fill="#3f5efb"><path d="M365 1414h231v-694h-231v694zm246-908q-1-52-36-86t-93-34-94.5 34-36.5 86q0 51 35.5 85.5t92.5 34.5h1q59 0 95-34.5t36-85.5zm585 908h231v-398q0-154-73-233t-193-79q-136 0-209 117h2v-101h-231q3 66 0 694h231v-388q0-38 7-56 15-35 45-59.5t74-24.5q116 0 116 157v371zm468-998v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z"></path></svg></span>
+                                    </span>
+                                </a></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card whr-col-sm-12 whr-col-md-6 whr-px-3 whr-col-lg-4 md-pb">
+                    <div class="card-wrapper">
+                        <div class="card-img" id="dinsay">
+                            <amp-img src="assets/images/dinsay.jpg" layout="responsive" height="159" width="159" alt="Julianne Dinsay" class="whr-m-auto">
+                            </amp-img>
+                        </div>
+                        <div class="card-box whr-pt-4 whr-px-4 whr-pb-5">
+                            <h4 class="whr-fonts-style card-subtitle align-center whr-semibold display-4">DATA VISUALIZATION SPECIALIST</h4>
+                            <h3 class="card-title whr-fonts-style align-center whr-pt-1 display-2 whr-pb-1" id="bluegradient">julianne dinsay</h3>
+                            <p class="whr-text whr-fonts-style align-center whr-pt-1 display-4">
+                                Julianne is a third year Cognitive Science major with a planned Digital Humanities minor. As the Data Visualization Specialist, she oversaw the creation of data visualizations and maps to appropriately support the narrative. When constructing the visuals, she ensured the data was in the correct format and configured the data in Tableau and RAWGraphs. By refining the aesthetics, format, and language of data, she delivered a humanistic presentation of the quantitative findings in order to optimize viewing of the project. Aside from her primary role in visualization and design, Julianne also assisted in writing the data critique, collecting academic sources, and ideating research questions.
+                            </p>
+                            <div class="icons-list social align-center whr-pt-3">
+                                
+                                
+                                
+                            <a href="mailto:juliannedinsay@gmail.com" target="_blank">
+                                    <span class="iconfont-wrapper">
+                                        <span class="amp-iconfont fa-envelope fa"><svg width="24" height="24" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" fill="#3f5efb"><path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"></path></svg></span>
+                                    </span>
+                                </a><a href="https://www.linkedin.com/in/julianne-dinsay-35401a162/" target="_blank">
+                                    <span class="iconfont-wrapper">
+                                        <span class="amp-iconfont fa-linkedin-square fa"><svg width="24" height="24" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" fill="#3f5efb"><path d="M365 1414h231v-694h-231v694zm246-908q-1-52-36-86t-93-34-94.5 34-36.5 86q0 51 35.5 85.5t92.5 34.5h1q59 0 95-34.5t36-85.5zm585 908h231v-398q0-154-73-233t-193-79q-136 0-209 117h2v-101h-231q3 66 0 694h231v-388q0-38 7-56 15-35 45-59.5t74-24.5q116 0 116 157v371zm468-998v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z"></path></svg></span>
+                                    </span>
+                                </a></div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="card whr-col-sm-12 whr-col-md-6 whr-px-3 whr-col-lg-4 last-child">
+                    <div class="card-wrapper">
+                        <div class="card-img" id="factora">
+                            <amp-img src="assets/images/factora.jpg" layout="responsive" height="159" width="159" alt="Raylene Factora" class="whr-m-auto">
+                            </amp-img>
+                        </div>
+                        <div class="card-box whr-pt-4 whr-px-4 whr-pb-5">
+                            <h4 class="whr-fonts-style card-subtitle align-center whr-semibold display-4">CONTENT DEVELOPER</h4>
+                            <h3 class="card-title whr-fonts-style align-center whr-pt-1 display-2 whr-pb-1" id="bluegradient">
+                                raylene factora
+                            </h3>
+                            <p class="whr-text whr-fonts-style align-center whr-pt-1 display-4">
+                                Raylene is a third year Communications major with planned minors in Digital Humanities and Asian American Studies. As the Content Developer, she oversaw the flow and structure of the entire narrative. She drafted research questions, created a narrative outline, sourced academic articles, and did the majority of reading and research for the project. Additionally, Raylene contributed to the annotated bibliography, edited the final narrative draft, assisted with writing the data critique, and wrote analyses of data visualizations.
+                            </p>
+                            <div class="icons-list social align-center whr-pt-3">
+                                
+                                
+                                
+                            <a href="mailto:raylenefactora@gmail.com" target="_blank">
+                                    <span class="iconfont-wrapper">
+                                        <span class="amp-iconfont fa-envelope fa"><svg width="24" height="24" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" fill="#3f5efb"><path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"></path></svg></span>
+                                    </span>
+                                </a><a href="https://www.linkedin.com/in/raylenefactora/" target="_blank">
+                                    <span class="iconfont-wrapper">
+                                        <span class="amp-iconfont fa-linkedin-square fa"><svg width="24" height="24" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" fill="#3f5efb"><path d="M365 1414h231v-694h-231v694zm246-908q-1-52-36-86t-93-34-94.5 34-36.5 86q0 51 35.5 85.5t92.5 34.5h1q59 0 95-34.5t36-85.5zm585 908h231v-398q0-154-73-233t-193-79q-136 0-209 117h2v-101h-231q3 66 0 694h231v-388q0-38 7-56 15-35 45-59.5t74-24.5q116 0 116 157v371zm468-998v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z"></path></svg></span>
+                                    </span>
+                                </a></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <section class="team1 whr-section cid-sa3slIEv6G clearbg" id="team1-b">
+    
+        
+        
+        <div class="container">
+            <div class="whr-row whr-jc-c">
+                <div class="card whr-col-sm-12 whr-col-md-6 whr-px-3 whr-col-lg-4 md-pb">
+                    <div class="card-wrapper">
+                        <div class="card-img" id="gatchalian">
+                            <amp-img src="assets/images/gatchalian.jpg" layout="responsive" width="168" height="168" alt="Raphael Gatchalian" class="whr-m-auto">
+                            </amp-img>
+                        </div>
+                        <div class="card-box whr-pt-4 whr-px-4 whr-pb-5">
+                            <h4 class="whr-fonts-style card-subtitle align-center whr-semibold display-4">WEB DEVELOPER &amp; DESIGNER</h4>
+                            <h3 class="card-title whr-fonts-style align-center whr-pt-1 display-2 whr-pb-1" id="bluegradient">raphael gatchalian</h3>
+                            <p class="whr-text whr-fonts-style align-center whr-pt-1 display-4">Raphael is a second year Linguistics and Computer Science major with a minor in Cognitive Science and planned second minor in Digital Humanities. As Web Developer and Designer, he constructed the website and its information architecture to properly and cohesively present the project onto a digital platform. He was also in charge of primary design and stylistic elements, as well as utilizing the proper web frameworks and tools to make the website as accessible and aesthetically appealing as possible for all site users. Aside from his role in design and development, Raphael also assisted in drafting the data critique, research questions, and curating data visualizations.<br></p>
+                            <div class="icons-list social align-center whr-pt-3">
+                                
+                                
+                                 
+                            <a href="mailto:raphaelg09@ucla.edu" target="_blank">
+                                    <span class="iconfont-wrapper">
+                                        <span class="amp-iconfont fa-envelope fa"><svg width="24" height="24" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" fill="#3f5efb"><path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"></path></svg></span>
+                                    </span>
+                                </a><a href="http://linkedin.com/in/raphaelg09" target="_blank">
+                                    <span class="iconfont-wrapper">
+                                        <span class="amp-iconfont fa-linkedin-square fa"><svg width="24" height="24" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" fill="#3f5efb"><path d="M365 1414h231v-694h-231v694zm246-908q-1-52-36-86t-93-34-94.5 34-36.5 86q0 51 35.5 85.5t92.5 34.5h1q59 0 95-34.5t36-85.5zm585 908h231v-398q0-154-73-233t-193-79q-136 0-209 117h2v-101h-231q3 66 0 694h231v-388q0-38 7-56 15-35 45-59.5t74-24.5q116 0 116 157v371zm468-998v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z"></path></svg></span>
+                                    </span>
+                                </a></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card whr-col-sm-12 whr-col-md-6 whr-px-3 whr-col-lg-4 md-pb">
+                    <div class="card-wrapper">
+                        <div class="card-img" id="ong">
+                            <amp-img src="assets/images/ong.jpg" layout="responsive" height="168" width="168" alt="Ashley Ong" class="whr-m-auto">
+                            </amp-img>
+                        </div>
+                        <div class="card-box whr-pt-4 whr-px-4 whr-pb-5">
+                            <h4 class="whr-fonts-style card-subtitle align-center whr-semibold display-4">DATA SPECIALIST /<br>CO-EDITOR</h4>
+                            <h3 class="card-title whr-fonts-style align-center whr-pt-1 display-2 whr-pb-1" id="bluegradient">ashley ong</h3>
+                            <p class="whr-text whr-fonts-style align-center whr-pt-1 display-4">Ashley is a second year Design | Media Arts major with a planned minor in Digital Humanities. As the Data Specialist, she cleaned and compiled the dataset for it to be used for the visualizations to support our findings. She also authored the data source, process, and presentation. She also oversaw and edited the data critique and wrote about the ontology of the data. As one of the Co-Editors, she read over all of the written aspects of the website to make sure the overall tone was consistent and professional. Furthermore, she sourced images for the analysis pages and helped with the annotated bibliography.<br></p>
+                            <div class="icons-list social align-center whr-pt-3">
+                                
+                                
+                                
+                            <a href="mailto:ashleyong@ucla.edu" target="_blank">
+                                    <span class="iconfont-wrapper">
+                                        <span class="amp-iconfont fa-envelope fa"><svg width="24" height="24" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" fill="#3f5efb"><path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"></path></svg></span>
+                                    </span>
+                                </a><a href="https://www.linkedin.com/in/ashley-ong-79a0371b7/" target="_blank">
+                                    <span class="iconfont-wrapper">
+                                        <span class="amp-iconfont fa-linkedin-square fa"><svg width="24" height="24" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" fill="#3f5efb"><path d="M365 1414h231v-694h-231v694zm246-908q-1-52-36-86t-93-34-94.5 34-36.5 86q0 51 35.5 85.5t92.5 34.5h1q59 0 95-34.5t36-85.5zm585 908h231v-398q0-154-73-233t-193-79q-136 0-209 117h2v-101h-231q3 66 0 694h231v-388q0-38 7-56 15-35 45-59.5t74-24.5q116 0 116 157v371zm468-998v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z"></path></svg></span>
+                                    </span>
+                                </a></div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="card whr-col-sm-12 whr-col-md-6 whr-px-3 whr-col-lg-4 last-child">
+                    <div class="card-wrapper">
+                        <div class="card-img" id="zhang">
+                            <amp-img src="assets/images/zhang.jpg" layout="responsive" height="168" width="168" alt="Vivian Zhang" class="whr-m-auto">
+                            </amp-img>
+                        </div>
+                        <div class="card-box whr-pt-4 whr-px-4 whr-pb-5">
+                            <h4 class="whr-fonts-style card-subtitle align-center whr-semibold display-4">EDITOR-IN-CHIEF /<br>CO-CONTENT DEVEOPER<br></h4>
+                            <h3 class="card-title whr-fonts-style align-center whr-pt-1 display-2 whr-pb-1" id="bluegradient">
+                                vivian zhang</h3>
+                            <p class="whr-text whr-fonts-style align-center whr-pt-1 display-4">Vivian is a fourth year International Development Studies major. As the Editor-in-Chief, she oversaw the entirety of the project to ensure all elements of the project are present, cohesive, organized, accessible, and free of spelling and grammatical errors. Doubling as a Content Developer, she created and edited the content for the Introductory, Analysis, Discussion, and Conclusion pages with other team members. She also contributed analyses for all findings, focusing mostly on literature reviews, and assisted with the data critique. Lastly, she contributed to the sourcing of scholarly articles and edited the annotated bibliography.<br></p>
+                            <div class="icons-list social align-center whr-pt-3">
+                                
+                                
+                                
+                            <a href="mailto:vivian3d2y@g.ucla.edu" target="_blank">
+                                    <span class="iconfont-wrapper">
+                                        <span class="amp-iconfont fa-envelope fa"><svg width="24" height="24" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" fill="#3f5efb"><path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"></path></svg></span>
+                                    </span>
+                                </a><a href="http://linkedin.com/in/vivian-zhang-263aa1175" target="_blank">
+                                    <span class="iconfont-wrapper">
+                                        <span class="amp-iconfont fa-linkedin-square fa"><svg width="24" height="24" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" fill="#3f5efb"><path d="M365 1414h231v-694h-231v694zm246-908q-1-52-36-86t-93-34-94.5 34-36.5 86q0 51 35.5 85.5t92.5 34.5h1q59 0 95-34.5t36-85.5zm585 908h231v-398q0-154-73-233t-193-79q-136 0-209 117h2v-101h-231q3 66 0 694h231v-388q0-38 7-56 15-35 45-59.5t74-24.5q116 0 116 157v371zm468-998v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z"></path></svg></span>
+                                    </span>
+                                </a></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <section class="content2 whr-section article cid-sa8qhrwUtv" id="content2-d">
+        
+         
+    
+        <div class="container">
+            <div class="whr-row whr-jc-c">
+                <div class="whr-col-sm-12 whr-col-md-10 whr-col-lg-8">
+                    <h3 class="whr-fonts-style whr-section-title whr-light whr-py-1 display-2">
+                        acknowledgments</h3>
+                    <p class="whr-text whr-fonts-style whr-py-1 display-7">
+                        Cloud 6 would like to give a warm thank you to <strong>Professor Ashley Sanders Garcia</strong>, who provided us with the knowledge and tools we needed to put together all the components of the final project. We thoroughly enjoyed your class and know that we will be able to use everything we learned to move us forward in future endeavors!
+                    </p>
+                    <p class="whr-text whr-fonts-style whr-py-1 display-7">
+                        We would also like to thank our <strong>TA, Madison Faulis,</strong> for being so responsive and supportive of our team. Your consistent feedback and guidance allowed us to refine all the aspects of our project and helped us to put together a final product we are quite proud of!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mbr-section content5 cid-sa8rH2Dfjj" id="content5-e">
+        <div class="container">
+            <div class="mbr-row mbr-jc-c">
+                <div class="mbr-section-btn mbr-col-md-12 mbr-col-sm-12 mbr-col-lg-8 align-center">
+                    <a class="btn btn-md btn-primary-outline display-4" href="/analysis.html#introduction">
+                        GO TO INTRODUCTION
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    
+</body>
+</html>

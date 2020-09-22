@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html amp >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="assets/images/favico.png" type="image/x-icon">
+    <meta name="description"
+        content="A closer look into indicators of national development for the undergraduate course Digital Humanities 101 at UCLA. Made by Raphael Gatchalian, Tracy Vu, Julianne Dinsay, Raylene Factora, Ashley Ong, and Vivian Zhang.">
+    <meta name="amp-script-src" content="">
+    
+    <title>Analysis | World Happiness</title>
+    
+    <link rel="canonical" href="./">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+    <link href="https://fonts.googleapis.com/css?family=Karla:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style amp-custom> 
+        @import "css/styles.css";
+    </style>
+    <link rel="stylesheet" href="css/custom.css"> 
+    
+    <!-- <script async src="gradient.js"></script> -->
+    <script async src="js/scroll.js"></script>
+    <script async src="js/analysisscroll.js"></script>
+    <script async src="js/tableau.js"></script>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  
+</head>
+<body>
+    <div id="noiseoverlay"></div>
+    <div id="gradient"></div>
+    <a id="backtotopbutton"></a>
+
+    <!--mobile sidebar-->
+    <amp-sidebar id="sidebar" class="navigationbar" layout="nodisplay" side="right">
+        <div class="builder-sidebar" id="builder-sidebar">
+            <button on="tap:sidebar.close" class="close-sidebar">
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+                <li class="nav-item">
+                    <a class="nav-link link text-primary display-7" href="/analysis.html">
+                        <p><sub>01.</sub>&nbsp;ANALYSIS</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link text-primary display-7" href="/discussion.html">
+                        <p><sub>02.</sub>&nbsp;DISCUSSION</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link text-primary display-7" href="/data.html">
+                        <p><sub>03.</sub>&nbsp;DATA</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link text-primary display-7" href="/resources.html">
+                        <p><sub>04.</sub>&nbsp;RESOURCES</p>
+                    </a>
+                </li>
+            </ul>
+      </div>
+    </amp-sidebar>
+    <!--mobile sidebar-->
+
+    <section class="menu horizontal-menu navigationbar clearbg" id="menu2-0">
+        <nav class="navbar navbar-dropdown navbar-expand-lg navbar-fixed-top">
+            <div class="menu-container container-fluid"> 
+                <div class="navbar-brand">
+                    <a href="index.html">           
+                    <p class="whr whr-fonts-style whr-bold display-1 iconfont">
+                        wh.
+                    </p>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+                        <li class="nav-item">
+                            <a class="nav-link link text-primary display-7" href="/analysis.html">
+                                <sub>01.</sub>&nbsp;ANALYSIS
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link text-primary display-7" href="/discussion.html">
+                                <sub>02.</sub>&nbsp;DISCUSSION
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link text-primary display-7" href="/data.html">
+                                <sub>03.</sub>&nbsp;DATA
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link text-primary display-7" href="/resources.html">
+                                <sub>04.</sub>&nbsp;RESOURCES
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <button on="tap:sidebar.toggle" class="ampstart-btn hamburger sticky-but">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </section>
+
+    <section class="header2 homesection clearbg" id="header2-1">
+        <div class="container">
+            <div class="whr-row whr-jc-c">
+                <div class="whr-col-lg-10 whr-col-sm-12 whr-col-md-12 whr-flex whr-column">
+                    <h1 class="whr-fonts-style align-left whr-bold whr-pt-1 whr-pb-3 display-1 animate__animated animate__fadeInDown">
+                        analysis.
+                    </h1>
+                    <h3 class="whr-fonts-style align-left whr-pt-1 whr-pb-3 display-5">
+                        this page provides an introduction to our project and an analysis of the differences that could contribute
+                        to the disparities in data between the nordic countries and tiger economies based on the
+                        <a href="https://worldhappiness.report/ed/2020/" target="_blank">World Happiness Report 2020</a>. 
+                    </h3>
+                    <div class="whr-section-btn align-left">
+                        <a class="btn btn-md btn-primary-outline display-4 scroll-to-introduction"><sub>01.</sub>&nbsp;INTRODUCTION</a>
+                        <a class="btn btn-md btn-primary-outline display-4" href="#nordiccountries"><sub>02.</sub>&nbsp;NORDIC COUNTRIES</a>
+                        <a class="btn btn-md btn-primary-outline display-4" href="#asiancountries"><sub>03.</sub>&nbsp;ASIAN COUNTRIES</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    <section class="content2 whr-section article cid-s9euAOC120" id="introduction">
+        <div class="container">
+            <div class="whr-row whr-jc-c">
+                <div class="whr-col-sm-12 whr-col-md-10 whr-col-lg-8">
+                    <h3 class="whr-fonts-style whr-section-title whr-light whr-py-1 display-2">
+                        introduction</h3>
+                    <p class="whr-text whr-fonts-style whr-py-1 display-7">
+                        Happiness has long been perceived as the ultimate, universal goal in life. An example being the ending of the famous line in the U.S. Declaration of Independence — “Life, Liberty, and the pursuit of Happiness.” As defined by Aristotle, happiness consists in achieving, through the course of a whole lifetime, all the goods — health, wealth, knowledge, friends, etc. — that lead to the perfection of human nature and to the enrichment of human life (Ross, 1999). In this project, we take a closer look at the World Happiness Report (2020), a publication of the Sustainable Development Solutions Network which uses data from the Gallup World Poll to identify the variables of happiness. Specifically, we will be comparing and contrasting the Nordic and Asian regions to identify the connection between social support and happiness. We will be analyzing the WHR for our research questions and using it as a guide for our discussion on the role of happiness.
+                    </p>
+                    <p class="whr-text whr-fonts-style whr-py-1 display-7">
+                        Based on our literature review, scholars generally attribute happiness to health, wealth, and social relationships. Contradictions in scholar discussions exist as the chicken or egg causality dilemma, or commonly stated as “which came first: the chicken or the egg?” Some believe good things in life bring about happiness. Others say otherwise and argue that happiness brings good things in life. Happiness is an extensive topic that attracts all fields of study, ranging from health professionals to philosophical thinkers. However, the essential questions such as “what brings happiness?” “what is the role of happiness?” and “what is the role of culture in happiness?” are still unsolved enigmas. Given the dynamic nature of our society, we also believe the conundrum centered on happiness will continue to lead intriguing discussions and explorations for scholars in the future.
+                    </p>
+                    <p class="whr-text whr-fonts-style whr-py-1 display-7">
+                        Through the project, we strive to supplement the given concept of happiness in its cultural aspects. We also hope to address the question — Do more socially divided countries have more polarized responses for happiness than one with fewer disparities? This is a question scholars haven’t discussed as zealously as they do to others yet. In lieu of answering the larger questions that are beyond our scope of research, we focused on identifying the cultural differences that set the Nordic and Tiger economies apart in happiness levels despite their common economic forte. We hope to help others perceive the underlying biases in the WHR, and enlighten the role of happiness for individuals.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="whr-section content1 cid-sa3uuRVnwv clearbg" id="content1-c" style="padding-bottom:0;">
+    
+        
+    
+        <div class="container">
+           <div class="whr-row whr-jc-c">
+               <div class="whr-col-sm-12 whr-col-md-8">
+                   <h2 class="whr-title align-center whr-fonts-style whr-bold display-2">
+                       <span style="font-weight: normal; font-size: 3rem; color: #ffffff">
+                           research questions
+                       </span>
+                   </h2>
+                   
+               </div>
+           </div>
+       </div>
+   </section>
+
+    <section class="content9 cid-safpXqYTsg" id="content9-z">
+        <div class="container">
+            <div class="">
+                <div class="counter-container display-4" style="font-size: 1.5rem; color: #ffffff !important;">
+                    <ol>
+                        <li style="line-height: 2rem; padding-bottom:2.5rem;">The Nordic countries and the Tiger Economy countries of Asia both possess strong economies based on their GDP, yet have opposing happiness scores  — why is that?</li>
+                        <li style="line-height: 2rem;">Do more socially divided countries have more polarized responses for happiness than one with fewer disparities?</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="image1 cid-sahKmVDZSB" id="image1-17">
+
+    
+
+        <div>
+            <div class="image-block">
+
+                <!-- TABLEAU MAP -->
+                <div class='tableauPlaceholder' id='viz1599833196346' style='position: relative; margin: auto;'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ha&#47;HappinessinNordicRegionsvs_TigerEconomies&#47;HappinessinNordicRegionsvs_TigerEconomies&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='views&#47;HappinessinNordicRegionsvs_TigerEconomies&#47;HappinessinNordicRegionsvs_TigerEconomies?:language=en&amp;:embed=y&amp;:display_count=y&amp;publish=yes' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ha&#47;HappinessinNordicRegionsvs_TigerEconomies&#47;HappinessinNordicRegionsvs_TigerEconomies&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>
+                <!-- TABLEAU MAP -->
+                
+                <div class="whr-figure-caption">
+                    <p class="whr-text whr-black align-center whr-fonts-style whr-py-1 whr-px-2 display-7" style = "color: #ffffff !important; width: 80%; margin: auto;">
+                        <br><em>This map demonstrates the happiness scores of each of the regions. The deeper the color, the higher the happiness score. As emphasized by this visualization, there is a stark difference in happiness scores between the two regions.</em></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="content2 whr-section article cid-safpXt0SoY" id="content2-10" style="padding-bottom: 0px !important;">
+        <div class="container">
+            <div class="whr-row whr-jc-c">
+                <div class="whr-col-sm-12 whr-col-md-10 whr-col-lg-8">
+                    <p class="whr-text whr-fonts-style whr-py-1 display-7">The Nordic region, similar to Disneyland, has been praised globally in the past several years for being the “happiest place on Earth.” On the other hand, Asian countries consistently have ranked lower in happiness scores than Nordic Countries despite sharing many similarities, especially strong economic performance. Spoiler alert: the East and West have always differed in cultural values. In this section, we will take a deep look into how cultural and societal differences may have led to this disparity in happiness levels.<br></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="image2 cid-sahKIbgvaE" id="image2-18" style="background-color:#ffffff !important;">
+        <div class="container">
+            <div class="image-block whr-m-auto">
+                <amp-img src="assets/images/dataviz1.png" layout="responsive" width="731" height="550" alt="2012-2019 Happiness of Tiger Economies vs. Nordic Regions Over Time" title="2012-2019 Happiness of Tiger Economies vs. Nordic Regions Over Time"> 
+                </amp-img>
+                <div class="whr-figure-caption">
+                    <p class="whr-text whr-black align-center whr-fonts-style whr-py-1 display-7">
+                        <em>This visualization demonstrates the consistent disparity in happiness scores between the two regions over time. The shades of blue represent the Tiger economies, while the shades of pink and purple demonstrate the Nordic countries. As one can see, the Nordic countries have consistently been “happier” than the countries with Tiger economies.</p>
+                        </em>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="image2 cid-sahKIBJfjU" id="image2-19" style="background-color:#ffffff !important;">
+        <div class="container">
+            <div class="image-block whr-m-auto">
+                <amp-img src="assets/images/dataviz2.png" layout="responsive" width="730.9171597633136" height="732" alt="Average Happiness Score vs. GDP of Tiger Economies and Nordic Regions" title="Average Happiness Score vs. GDP of Tiger Economies and Nordic Regions">
+                </amp-img>
+                <div class="whr-figure-caption">
+                    <p class="whr-text whr-black align-center whr-fonts-style whr-py-1 display-7">
+                        <em>This visualization shows the average 2020 GDP per capita in each region as compared to the average 2020 happiness scores in each region. As one can see, the GDP per capita is very similar between the two regions, however there is a big gap in the happiness scores.</em>
+</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="whr-section clearbg content19 nordiccountriesheader" id="nordiccountries">
+
+    
+
+        <div class="container">
+            <div class="">
+                <div class="">
+                    <h2 class="whr-title align-center whr-fonts-style whr-bold whr-white whr-pb-2 display-1"><br><br>nordic countries</h2>
+                    <h3 class="whr-section-subtitle align-center whr-light whr-fonts-style whr-white whr-pb-3 whr-pt-1 display-7" style="color: #ffffff !important;"><em>Background image: Midsummer festival goers in Leksand, Sweden. <a style="color: #ffffff !important;" href="https://www.nytimes.com/2018/08/26/world/europe/nordic-countries-happiness.html"><i>(New York Times)</i></a></em></h3>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content2 whr-section article cid-safpXwvZiX" id="content2-12">
+    
+     
+
+        <div class="container">
+            <div class="whr-row whr-jc-c">
+                <div class="whr-col-sm-12 whr-col-md-10 whr-col-lg-8">
+                    <h3 class="whr-fonts-style whr-section-title whr-light whr-py-1 display-2">nordic xenophobia</h3>
+                    <p class="whr-text whr-fonts-style whr-py-1 display-7">First shown when the Nordic countries are being bystanders in the colonialism history, xenophobic isolationism is the major source for objurgation regarding their salient status in happiness ranking. In Maggie Zesseit’s article “The Happiest Xenophobes on Earth,” violent attacks against Muslims have increased significantly in recent years. Over the past decade, there has been a rise of radical right parties along with a high frequency of major Mosque attacks. For example, the Danish People’s Party emerged in June 2015 as the second-largest political party, close to doubling their results from the previous year (Eddy 2015). Similarly, Norway’s far-right Progress Party won the election in 2013 and made its way into government for the first time (Paterson 2013). Inevitably, placing extreme rightists in decision-making positions will only aggravate racial dissent among the people, leading minorities to continue to suffer. Within the three month frame from December 2014 to February 2015, there were two major Mosque attacks in Sweden (Zeisset 2016). </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="features1 whr-section cid-sahNOHREvz" id="features1-1e">
+    
+        
+        
+        <div class="container">
+            <div class="whr-row whr-jc-c">
+                <div class="card whr-col-sm-12 whr-col-md-6 whr-px-3">
+                    <div class="card-wrapper">
+                        <div class="card-img">
+                            <amp-img src="assets/images/denmarkxenophobia.png" layout="responsive" width="528" height="352" alt="Xenophobia in Denmark">
+                                
+                            </amp-img>
+                        </div>
+                        <div class="card-box whr-pt-4">
+                            <p class="whr-text whr-fonts-style align-left whr-pt-1 display-7">
+                                <em>Xenophobia and Islamophobia spreads in Denmark as the country grows more racially diverse.
+                                    <a href="https://cms.qz.com/wp-content/uploads/2016/11/denmark_muslim_photo_olafur_gestsson-e1478898768939.jpg?quality=75&strip=all&w=1600&h=900&crop=1" target="_blank"><i>Laffur Gestsson/Scanpix/Quartz</i></a>
+                                </em>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card whr-col-sm-12 whr-col-md-6 whr-px-3 last-child">
+                    <div class="card-wrapper">
+                        <div class="card-img">
+                            <amp-img src="assets/images/swedenprotesters.png" layout="responsive" height="352" width="528" alt="Swedish protesters">
+                                
+                            </amp-img>
+                        </div>
+                        <div class="card-box whr-pt-4">
+                            
+                            <p class="whr-text whr-fonts-style align-left whr-pt-1 display-7">
+                                <em>Protesters in Sweden demand an end to mosque attacks.
+                                    <a href="http://america.aljazeera.com/articles/2015/1/2/sweden-mosque-attacks.html" target="_blank"><i>Fredrik Sandberg / TT News Agency / REUTERS</i></a>
+                                </em>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <section class="content2 whr-section article cid-sahOcRzWyW" id="content2-1f">
+        
+         
+    
+        <div class="container">
+            <div class="whr-row whr-jc-c">
+                <div class="whr-col-sm-12 whr-col-md-10 whr-col-lg-8">
+                    
+                    <p class="whr-text whr-fonts-style whr-py-1 display-7">To make matters worse, on February 14, 2015, two shootings took place in Copenhagen within hours of each other, killing two and wounding five. The assailant was a Muslim Danish citizen with ties to Islamic extremists (Gargiulo, Botelho, and Almasy 2015). In response, Denmark has been drastically cutting refugees’ rights and benefits and discouraging new asylum seekers. The Syrian refugee crisis since 2011 has only further exacerbated the situation and extended the agglomeration of hostility towards outsiders. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="features10 cid-sahOj0cmAA" id="features10-1g">
+    
+        
+           
+        <div class="container">
+            <div class="whr-row whr-jc-c">
+                <div class="image-block whr-col-sm-12 whr-col-md-6 ">
+                    <amp-img src="assets/images/finlandrefugees.png" layout="responsive" width="522" height="348" alt="Finland refugees">
+                        
+                    </amp-img>
+                </div>
+                <div class="text-block whr-col-sm-12 whr-col-md-6 whr-m-auto">
+                    
+                    <p class="whr-fonts-style whr-text align-left whr-pt-1 whr-pb-3 display-7">In fact, Finland and Sweden have shown a growing reluctance to accept more refugees (Noack 2015). Noticeably, the Nordic countries’ responses to minority rights, migration, and the Syrian refugee crisis reflected the political biases against outgroups, especially Muslims.<br><br><em>Left: Refugees waiting in line to enter Finland. <a href="https://www.middleeastmonitor.com/20200730-99-refugees-relocated-from-greece-to-germany-finland-by-eu/" target="_blank"><i>Mstyslav Chernov / Wikipedia/MEMO</i></a></em><br><br><br><em><br></em>
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="content2 whr-section article cid-sahNpgSmfX" id="content2-1d">
+        
+         
+    
+        <div class="container">
+            <div class="whr-row whr-jc-c">
+                <div class="whr-col-sm-12 whr-col-md-10 whr-col-lg-8">
+                    <h3 class="whr-fonts-style whr-section-title whr-light whr-py-1 display-2">happy xenophobics</h3>
+                    <p class="whr-text whr-fonts-style whr-py-1 display-7">In order to explain the relation between xenophobic sentiments and high happiness scores of the Nordic countries, we must comprehend the triggers of xenophobia. Based on Olga Lakimova’s “Exploring the Dynamics of Xenophobia in the Nordic Countries,” a work based on the World Value Survey Project, she concluded that xenophobic attitudes are heavily shaped by the levels of insecurity one experiences during the formative years. The upward trend in xenophobic attitudes is explained by the voting population’s insecure developmental experiences (Lakimova 2018). Noteworthy, Lakimova’s research also showed a behavior trend of Nordic countries in decreasing numbers of intolerant citizens during the past twenty years. However, despite being named the happiest country in the WHR three years in a row, Finland is on the negative side with increasing level of xenophobic attitudes from 4 to 14 percent over the last decade (Lakimova 2018).<br> </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="features1 whr-section cid-sahR9LrGsv" id="features1-1j">
+    
+        
+        
+        <div class="container">
+            <div class="whr-row whr-jc-c">
+                <div class="card whr-col-sm-12 whr-col-md-6 whr-px-3">
+                    <div class="card-wrapper">
+                        <div class="card-img">
+                            <amp-img src="assets/images/finlandflag.jpeg" layout="responsive" width="528" height="352" alt="Finland flag">
+
+                                
+                            </amp-img>
+                        </div>
+                        <div class="card-box whr-pt-4">
+                            
+                            <p class="whr-text whr-fonts-style align-left whr-pt-1 display-7">
+                                <em>Finland is ranked number one in happiness for the first time in 2016, yet continues to rise in xenophobic attitudes.
+                                    <a href="https://storage.googleapis.com/afs-prod/media/f92511ba786841aabbc8c1e35aca155a/800.jpeg" target="_blank"><i>Martti Kainuleinen/Lehtikuva via AP</i></a>
+                                </em>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card whr-col-sm-12 whr-col-md-6 whr-px-3 last-child">
+                    <div class="card-wrapper">
+                        <div class="card-img">
+                            <amp-img src="assets/images/norwayfestival.png" layout="responsive" height="352" width="528" alt="Norway festival">
+                                
+                            </amp-img>
+                        </div>
+                        <div class="card-box whr-pt-4">
+                            
+                            <p class="whr-text whr-fonts-style align-left whr-pt-1 display-7">
+                                <em>Similarly, Norway is ranked third in happiness for 2020.
+                                    <a href="https://www.thelocal.no/userdata/images/article/2cb3167bd9a06638b47321b3b57398cb9e1b8d366ff30d23654dc8fb3e9bd82e.jpg" target="_blank"><i>Audun Braastad/NTB scanpix</i></a>
+                                </em>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <section class="content2 whr-section article cid-sahRlsu7YO" id="content2-1k">
+        
+         
+    
+        <div class="container">
+            <div class="whr-row whr-jc-c">
+                <div class="whr-col-sm-12 whr-col-md-10 whr-col-lg-8">
+                    
+                    <p class="whr-text whr-fonts-style whr-py-1 display-7">Contemporary social theorists have joined the discourse on the causation of xenophobia. Scholars explain xenophobic attitudes usually have objective sources and triggers (resource stress), that are spread among downward mobile groups, and can be observed in particular periods of time (economic recession) (Lakimova 2018). According to theories of nation and nationalism, xenophobia is an expression of nationalism. This view is supplemented with Blumer’s (1958) the group threat/competition theory, which claims that within society there is always resource stress. Consequently, outgroups will be perceived as competitors for scarce resources. Reasonably, xenophobia attitudes are more easily spread among downward mobile groups as they are more susceptible to be denied access to the limited resources available. Therefore, xenophobia can be observed particularly during times of economic recession. As the voting population experienced economic recession during its formative years, their xenophobia ensured their high happiness level.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="image2 cid-sahQ0ZhWet" id="image2-1h">
+    
+        
+    
+        <div class="container">
+            <div class="image-block whr-m-auto">
+                <amp-img src="assets/images/dataviz3.png" layout="responsive" width="1328" height="1316" alt="Data visualization 3">
+                </amp-img>
+                <div class="whr-figure-caption">
+                    <p class="whr-text whr-black align-center whr-fonts-style whr-py-1 display-7">
+                        <em>This visualization emphasizes how the average GDP per capita in the Nordic regions and Tiger economies is very similar, however the social support scores have a clear disparity. In this section, we explore the factors that could contribute to this disparity, including the contrast of Eastern and Western values.</em></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="whr-section clearbg content19 asiancountriesheader" id="asiancountries">
+
+    
+
+        <div class="container">
+            <div class="">
+                <div class="">
+                    <h2 class="whr-title align-center whr-fonts-style whr-bold whr-white whr-pb-2 display-1"><br><br>asian countries</h2>
+                    <h3 class="whr-section-subtitle align-center whr-light whr-fonts-style whr-white whr-pb-3 whr-pt-1 display-7" style="color: #ffffff !important;"><em>Background image: Japanese young school children face different pressures and expectations than Nordic school aged children. <a href="https://img.theculturetrip.com/wp-content/uploads/2020/03/2b2b67k.jpg" target="_blank" style="color: #ffffff !important;"><i>(Source)</i></a></em></h3>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="content2 whr-section article cid-safpXzstXL" id="content2-14">
+        
+         
+    
+        <div class="container">
+            <div class="whr-row whr-jc-c">
+                <div class="whr-col-sm-12 whr-col-md-10 whr-col-lg-8">
+                    <h3 class="whr-fonts-style whr-section-title whr-light whr-py-1 display-2">
+                        asian collectivism</h3>
+                    <p class="whr-text whr-fonts-style whr-py-1 display-7">In contrast to Nordic countries’ xenophobic, individualistic ideology, the Asian region, where the Tiger economies locate, is more often attributed to its cultural values centered on collectivism. In Lu and Gilmour’s research — “Cultural Values and Happiness: An East-West Dialogue” — the dominant values in the West are “emphasized on individualistic striving and achievement, a legalistic approach, control, advancement, and egalitarian social arrangements” (p. 489). Whereas in Asia, Confucianism, an ancient ideology that promotes collectivism and sacrifice for the betterment of society, remains to be the prevailing philosophy.<br></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="image2 cid-sahRTgs2mj" id="image2-1l">
+    
+        
+    
+        <div class="container">
+            <div class="image-block whr-m-auto">
+                <amp-img src="assets/images/indivcollect.png" layout="responsive" width="564" height="318" alt="Individualism vs. Collectivism">
+                    
+                </amp-img>
+                <div class="whr-figure-caption">
+                    <p class="whr-text whr-black align-center whr-fonts-style whr-py-1 display-7">
+                        <i>Individualism vs. Collectivism.
+                        <a href="https://www.theresearch.ninja/2019/09/individualist-vs-collectivist.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+TheResearchNinja+(The+Research+Ninja)&m=1" target="_blank"><i>Research Ninja</i></a></i>
+                    </p>
+                        
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="content2 whr-section article cid-sahSuaL2dx" id="content2-1m">
+        
+         
+    
+        <div class="container">
+            <div class="whr-row whr-jc-c">
+                <div class="whr-col-sm-12 whr-col-md-10 whr-col-lg-8">
+                    
+                    <p class="whr-text whr-fonts-style whr-py-1 display-7">As discussed by Lu and Gilmour, such East-West distinction in cultural values resulted in very different definitions and processes of happiness. While it is an universal idea that happiness is anything good in life, such as good health, good career, and good social relations, the East places “family” and the “general well being of the society” in the center of it all. The Chinese believe homeostasis creates harmony in society, which is more important than individual welfare. For example, Taoism, another eminent Chinese philosophy, preaches submission to the environment instead of dominance.
+                        As Lu and Gilmour summarized, Lao Tzu denounces materialistic desire and emphasized that good things are always followed by bad things and vice versa. Specifically, hardworking and frugal are the key qualities to achieve respectable social status, suppress selfish desires, lead a virtuous life, and fulfill social duties (Lu &amp; Gilmour, p. 479). Chinese philosophy promotes happiness as a halcyon state of the mind. This East-West divergence is better visualized through Lu and Gilmour’s research work done in two samples, 439 Taiwanese university students and 344 UK university students. Based on Hofstede’s (1980) measure of individualism, Taiwan scored 44/53 and is a highly collectivistic society. Whereas, Britain scored only 3/53 (Lu &amp; Gilmour, p. 488). Also, results indicate cultural values correlate positively with all dimensions of happiness for the Taiwanese students and fewer dimensions for the British students. In particular, the effects of social integration and human heartedness are culturally dependent and of utmost importance in Eastern cultural values, but not in Western. As British scores higher on happiness in all subcategories, the theory that members of individualistic societies claim to be happier than those in collectivistic societies is strengthened (Myers &amp; Diener, 1995). In this way, it is evident that happiness measurements generally do not appreciate Eastern cultural values, especially collectivism.&nbsp;<br></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="content2 whr-section article cid-sahSQpOleQ" id="content2-1n">
+        
+         
+    
+        <div class="container">
+            <div class="whr-row whr-jc-c">
+                <div class="whr-col-sm-12 whr-col-md-10 whr-col-lg-8">
+                    <h3 class="whr-fonts-style whr-section-title whr-light whr-py-1 display-2">
+                        unhappy collectivists</h3>
+                    <p class="whr-text whr-fonts-style whr-py-1 display-7">Despite their magnanimous, selfless cultural values, the Tiger economies are ranked low in social support due to discouragement in dependency on others, ultimately resulting in lower happiness scores. This is exemplified through the region’s high levels of mental illness stigma and the high levels of shaming and guilt that tend to accompany when one becomes a member that relies on social support. According to Chee Hong Ng’s research article “The Stigma of Mental Illness in Asian Cultures,” in China, mental health problems are perceived as a result of weak character, evil spirits, or punishment for not respecting ancestors (Ng, p. 385). These baseless, obsolete beliefs contribute to the existing stigma attached to mental illness in Asian culture. As highlighted earlier, Asian society values conformity to norms, emotional self-control, collectivism, family recognition, and filial piety — obedient behaviors to family elders such as taking care of one’s parents.&nbsp;</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="features10 cid-sahTc64uN8" id="features10-1o">
+    
+        
+           
+        <div class="container">
+            <div class="whr-row whr-jc-c">
+                <div class="image-block whr-col-sm-12 whr-col-md-6 ">
+                    <amp-img src="/assets/images/filialpiety.png" layout="responsive" width="1065" height="900" alt="Filial piety">
+                        
+                    </amp-img>
+                </div>
+                <div class="text-block whr-col-sm-12 whr-col-md-6 whr-m-auto">
+                    
+                    <p class="whr-fonts-style whr-text align-left whr-pt-1 whr-pb-3 display-7">Therefore, falling out of the norm, including becoming mentally ill, makes one susceptible to become a subject of stigmatization of being dangerous, aggressive, and unpredictable (DHHS, 2001). Within the given context, seeking professional help will increase the likelihood of the mentally-ill to be stigmatized, making it difficult to manage a marriage, academic life, work-life, and family relations (Ng, p.385). In a collectivist society, an individual’s mental illness could bring shame and dishonor to one’s family. This further adds to the stigma as mentally-ill individuals are less likely to bring family honor nor assume filial piety responsibilities. Furthermore, Ying Wong and Jeanne Tsai’s “Cultural Models of Shame and Guilt,” delineates the paradox of how collectivism should lead to a higher social support score, but instead can be destructive to an individual’s happiness. <br><br>
+                        <em>Left: Filial piety in Chinese Classical Art. <a href="https://upload.wikimedia.org/wikipedia/commons/4/4d/The_Classic_of_Filial_Piety_%28%E5%A3%AB%E7%AB%A0_%E7%95%AB%29.jpg" target="_blank"><i>Ebrey, Patricia Buckley/ A Visual Sourcebook of Chinese Civilization</i></a></em><em><br></em></p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="content2 whr-section article cid-sahTVJeRtD" id="content2-1p">
+        
+         
+    
+        <div class="container">
+            <div class="whr-row whr-jc-c">
+                <div class="whr-col-sm-12 whr-col-md-10 whr-col-lg-8">
+                    
+                    <p class="whr-text whr-fonts-style whr-py-1 display-7">One way this is achieved is through the promotion of Confucian values where people should feel bad about themselves in order to continue self-improvement (Wong &amp; Tsai, p. 212). Among the 100+ terms for “shame,” it is often translated as “guilt” or a combination of both in Chinese, reflecting the marginal differences between outside perceptions of the individual and one’s internal sensations of oneself (Wong &amp; Tsai, p. 212). This is because in a collectivist society, people don’t separate themselves from relationships with others when identifying their emotions. Most importantly, these emotions may be elicited by others’ actions in the collectivistic models, whereas usually, only the individual who committed the wrongdoing feels so in individualistic models (Wong &amp; Tsai, p. 216). Loss of face induces intense shame on the individual, one’s family members, and other connected people in Chinese culture. This is normalized in Asian societies as people are used to being more attentive to others and shame may be experienced more often. In this way, Asia’s generally low ranking in social support and happiness scores are explained by its collectivistic values.<br></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="whr-section content5 cid-sa8rH2Dfjj" id="content5-e" style="background-color:transparent !important;">
+
+    
+
+        <div class="container">
+            <div class="whr-row whr-jc-c">
+                <div class="whr-section-btn whr-col-md-12 whr-col-sm-12 whr-col-lg-8 align-center">
+                    <a class="btn btn-md btn-primary-outline display-4" href="/discussion.html">
+                        GO TO DISCUSSION
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    
+</body>
+</html>

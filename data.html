@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html amp >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="assets/images/favico.png" type="image/x-icon">
+    <meta name="description"
+        content="A closer look into indicators of national development for the undergraduate course Digital Humanities 101 at UCLA. Made by Raphael Gatchalian, Tracy Vu, Julianne Dinsay, Raylene Factora, Ashley Ong, and Vivian Zhang.">
+    <meta name="amp-script-src" content="">
+    
+    <title>Data | World Happiness Report</title>
+    
+    <link rel="canonical" href="./">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+    <link href="https://fonts.googleapis.com/css?family=Karla:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style amp-custom> 
+        @import "css/styles.css";
+    </style>
+    <link rel="stylesheet" href="css/custom.css"> 
+    
+    <!-- <script async src="gradient.js"></script> -->
+    <script async src="js/scroll.js"></script>
+    <script async src="js/datascroll.js"></script>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  
+</head>
+<body>
+    <div id="noiseoverlay"></div>
+    <div id="gradient"></div>
+    <a id="backtotopbutton"></a>
+
+    <!--mobile sidebar-->
+    <amp-sidebar id="sidebar" class="navigationbar" layout="nodisplay" side="right">
+        <div class="builder-sidebar" id="builder-sidebar">
+            <button on="tap:sidebar.close" class="close-sidebar">
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+                <li class="nav-item">
+                    <a class="nav-link link text-primary display-7" href="/analysis.html">
+                        <p><sub>01.</sub>&nbsp;ANALYSIS</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link text-primary display-7" href="/discussion.html">
+                        <p><sub>02.</sub>&nbsp;DISCUSSION</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link text-primary display-7" href="/data.html">
+                        <p><sub>03.</sub>&nbsp;DATA</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link text-primary display-7" href="/resources.html">
+                        <p><sub>04.</sub>&nbsp;RESOURCES</p>
+                    </a>
+                </li>
+            </ul>
+      </div>
+    </amp-sidebar>
+    <!--mobile sidebar-->
+
+    <section class="menu horizontal-menu navigationbar clearbg" id="menu2-0">
+        <nav class="navbar navbar-dropdown navbar-expand-lg navbar-fixed-top">
+            <div class="menu-container container-fluid"> 
+                <div class="navbar-brand">
+                    <a href="index.html">           
+                    <p class="whr whr-fonts-style whr-bold display-1 iconfont">
+                        wh.
+                    </p>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+                        <li class="nav-item">
+                            <a class="nav-link link text-primary display-7" href="/analysis.html">
+                                <sub>01.</sub>&nbsp;ANALYSIS
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link text-primary display-7" href="/discussion.html">
+                                <sub>02.</sub>&nbsp;DISCUSSION
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link text-primary display-7" href="/data.html">
+                                <sub>03.</sub>&nbsp;DATA
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link text-primary display-7" href="/resources.html">
+                                <sub>04.</sub>&nbsp;RESOURCES
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <button on="tap:sidebar.toggle" class="ampstart-btn hamburger sticky-but">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </section>
+
+    <section class="header2 homesection clearbg" id="header2-1">
+        <div class="container">
+            <div class="whr-row whr-jc-c">
+                <div class="whr-col-lg-10 whr-col-sm-12 whr-col-md-12 whr-flex whr-column">
+                    <h1 class="whr-fonts-style align-left whr-bold whr-pt-1 whr-pb-3 display-1 animate__animated animate__fadeInDown">
+                        the data.
+                    </h1>
+                    <h3 class="whr-fonts-style align-left whr-pt-1 whr-pb-3 display-5">
+                        this page presents information on our chosen dataset as well as our critique on its gathering and ontologies.
+                    </h3>
+                    <div class="whr-section-btn align-left">
+                        <a class="btn btn-md btn-primary-outline display-4" href="https://docs.google.com/spreadsheets/d/19F02_j_ipfXMe8QXF9fjqpsDELH_1_ohK5wNzyr8jp0" target="_blank">DATASET (Google Sheets)</a>
+                        <a class="btn btn-md btn-primary-outline display-4" href="#critique">ABOUT THE DATA</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    <section class="content2 whr-section article cid-sa8qhrwUtv" id="critique">
+        <div class="container">
+            <div class="whr-row whr-jc-c">
+                <div class="whr-col-sm-12 whr-col-md-10 whr-col-lg-8 whr-pt-5">
+                    <h3 class="whr-fonts-style whr-section-title whr-light whr-py-1 display-2">
+                        What is the World Happiness Report Dataset?</h3>
+                    <p class="whr-text whr-fonts-style whr-py-1 display-7">
+                        Every year since 2012, the World Happiness Report ranks countries based on their people’s overall calculated happiness score using factors from this dataset. The dataset includes the name of the country as well as the region the country belongs to. A primary basis of the score is from a survey in which individuals are roughly asked the question “How would you rank your happiness on a scale from 1 to 10?”, a measure that is called the Cantril life ladder. From 2012 to 2019, the other factors that are taken into consideration for the happiness score change slightly, but generally, the primary categories utilized are: GDP per capita, social support, trust in the government, freedom, health (life expectancy), and generosity. The data partially consists of collected ordinal responses from the Gallup World Poll, while other data like average GDP per capita and Health are from other national datasets.
+                    </p>
+                    <p class="whr-text whr-fonts-style whr-py-1 display-7">
+                        This dataset can illuminate how variance in certain subcategories like social support and GDP of a country affects a country’s happiness. By analyzing trends between the subcategories, we can draw conclusions about how these are correlated with the overall happiness of people in a country.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content2 whr-section article cid-sa8qhrwUtv" id="content2-d">
+        <div class="container">
+            <div class="whr-row whr-jc-c">
+                <div class="whr-col-sm-12 whr-col-md-10 whr-col-lg-8">
+                    <h3 class="whr-fonts-style whr-section-title whr-light whr-py-1 display-2">
+                        How was the dataset generated?</h3>
+                    <p class="whr-text whr-fonts-style whr-py-1 display-7">
+                        The Gallup World Poll measures factors related to well-being in over 160 countries through 100 global and region-specific questions. Gallup utilizes telephone surveys in countries where coverage exceeds 80% of the population and face-to-face surveys in developing countries. A typical survey includes at least 1000 individuals, but may range from 500 to 2000 depending on the size or special interest of a particular country. To ensure a nationally representative sample, Gallup constructs base sampling weights to account for oversampling and post-stratification weights to consider data by gender, age, and socioeconomic status. 
+                    </p>
+                    <p class="whr-text whr-fonts-style whr-py-1 display-7">
+                        The data for GDP per capita and Health Life Expectancy are based on World Development Indicators and the World Health Organization’s Global Health Observatory respectively. When there are silences, the report extrapolates from previous years and sources from other reputable records. The report also compares the countries against a hypothetical country, “Dystopia,” which contains the lowest averages of each of the six factors in order to determine ranking. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content2 whr-section article cid-sa8qhrwUtv" id="content2-d">
+        <div class="container">
+            <div class="whr-row whr-jc-c">
+                <div class="whr-col-sm-12 whr-col-md-10 whr-col-lg-8">
+                    <h3 class="whr-fonts-style whr-section-title whr-light whr-py-1 display-2">
+                        What are the original sources and how were those sources funded? </h3>
+                    <p class="whr-text whr-fonts-style whr-py-1 display-7">
+                        The primary data source of the World Happiness Report is the Gallup World Poll, but also acknowledges the World Development Indicators and the World Health Organization’s Global Health Observatory as sources.
+                    </p>
+                    <p class="whr-text whr-fonts-style whr-py-1 display-7">
+                        Institutional sponsors of the report include the Sustainable Development Solutions Network (SDSN), the Center for Sustainable Development at Columbia University, the Centre for Economic Performance at the LSE, the Vancouver School of Economics at UBC, and the Wellbeing Research Centre at Oxford. The report is also supported by the Ernesto Illy Foundation, illycaffè, Davines Group, Blue Chip Foundation, the William, Jeff, and Jennifer Gross Family Foundation, and University’s largest ice cream brand Wall’s. It is an annual publication of the United Nations Sustainable Development Solutions Network.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content2 whr-section article cid-sa8qhrwUtv" id="content2-d">
+        <div class="container">
+            <div class="whr-row whr-jc-c">
+                <div class="whr-col-sm-12 whr-col-md-10 whr-col-lg-8">
+                    <h3 class="whr-fonts-style whr-section-title whr-light whr-py-1 display-2">
+                        What information does the dataset leave out? </h3>
+                    <p class="whr-text whr-fonts-style whr-py-1 display-7">
+                        The World Happiness Report acknowledges that the six broad factors used in the report are not the most comprehensive representation of happiness, but the most accessible for their research. As stated in the report’s website, important variables such as unemployment or inequality do not appear because comparable international data are not yet available for the full sample of countries. The countries that are included in the report also slightly change each year, and thus the dataset has silences for notable societies such as North Korea and Kosovo. The data available for these countries also varies each year, which makes it more difficult to compare chronologically and with other countries. 
+                    </p>
+                    <p class="whr-text whr-fonts-style whr-py-1 display-7">
+                        Additionally, factors like trust in government and overall individual happiness are ranked on strictly ordinal scales (1-10 or 0-1), so there is no space for individuals who answered the surveys to explain their answer. The ordinal nature of the research’s methodology leaves out potential qualitative data from individuals who have answered their survey that could accompany the numerical scores for each country, as well as specific data on each individual from which the Gallup World Poll calculates a nationally representative sample, including race, gender, and age.
+                    </p>
+                    <p class="whr-text whr-fonts-style whr-py-1 display-7">
+                        This nominal data could explain why certain factors are low or high and could be tied to sociocultural or political factors that would be otherwise left out in the survey. Due to these silences in the data, the researchers include additional bibliography and analysis in the actual report that could provide some background for the numbers in the dataset.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content2 whr-section article cid-sa8qhrwUtv" id="content2-d">
+        <div class="container">
+            <div class="whr-row whr-jc-c">
+                <div class="whr-col-sm-12 whr-col-md-10 whr-col-lg-8 whr-pb-5">
+                    <h3 class="whr-fonts-style whr-section-title whr-light whr-py-1 display-2">
+                        Dataset Ontologies</h3>
+                    <p class="whr-text whr-fonts-style whr-py-1 display-7">
+                        The report chose the six factors in determining a country’s happiness because they were broadly found in research literature. However, since factors like unemployment and inequality that are important factors in determining happiness are left out because of insufficient data across all the countries surveyed, the narrative of world happiness is changed. The data is collected from many locations around the world, but the publication is based in the United States, which could show a bias towards Western countries and what Western countries think of as a country’s happiness. 
+                    </p>
+                    <p class="whr-text whr-fonts-style whr-py-1 display-7">
+                        It must also be noted that the report, while it is a United Nations initiative, is funded by private foundations that are mostly American. The United Nations, as well as the Gallup World Poll which the report takes most of its data from, are both headquartered in the United States. The vast majority of the editing board is also white. This westerrn bias could also affect what types of governments and countries are seen as happy. Since the country in which the report is based is a federal republic, this could affect what form of government is favorable or better. 
+                    </p>
+                    <p class="whr-text whr-fonts-style whr-py-1 display-7">
+                        The World Happiness report is also only offered in English even though it is a global report. This inaccessibility makes a vast majority of the world unable to read a report that is supposed to talk about global happiness. 
+                    </p>
+                    <p class="whr-text whr-fonts-style whr-py-1 display-7">
+                        All of these aspects of the report and data may have a significant influence on how the factors were determined, due to inherent bias from the perspective of someone looking at the data because of how much a person knows and thinks of each country. Population size of a country or the political/economic system of a country are examples of factors that the data does not state but could affect perception and analysis.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mbr-section content5 cid-sa8rH2Dfjj" id="content5-e">
+
+    
+
+        <div class="container">
+            <div class="mbr-row mbr-jc-c">
+                <div class="mbr-section-btn mbr-col-md-12 mbr-col-sm-12 mbr-col-lg-8 align-center">
+                    <a class="btn btn-md btn-primary-outline display-4" href="/resources.html">
+                        GO TO RESOURCES
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    
+</body>
+</html>
